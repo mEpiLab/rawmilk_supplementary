@@ -5,7 +5,7 @@ This repository contains the necessary material to reproduce the paper
 
 ## Supplementary text
 
-The supplementary folder contains a PDF file of supplementary details which includes the
+The supplementary_material folder contains a PDF file of supplementary details which includes the
 full formulation of the MCMC scheme for fitting total bacterial count data.
 
 ## Data
