@@ -183,8 +183,8 @@ dev.off()
 
 # Figure 5: Predictive pathogen counts
 
-sens_folder <- "../sensitivity_model/output"
-d <- read.table(file.path(sens_folder, "pathogen_counts.txt"))
+survey_folder <- "../survey_model/output"
+d <- read.csv(file.path(survey_folder, "pathogen_counts.csv"))
 
 pdf("figure5.pdf", width=10, height=8)
 par(mfrow=c(2,2))
@@ -200,13 +200,13 @@ for (i in 1:4)
 dev.off()
 
 s <- list()
-s[[1]] <- read.csv(file.path(sens_folder, "campy_sens.csv"))
-s[[2]] <- read.csv(file.path(sens_folder, "ecoli_sens.csv"))
-s[[3]] <- read.csv(file.path(sens_folder, "salmonella_sens.csv"))
-s[[4]] <- read.csv(file.path(sens_folder, "listeria_sens.csv"))
+s[[1]] <- read.csv(file.path(survey_folder, "campy.csv"))
+s[[2]] <- read.csv(file.path(survey_folder, "ecoli.csv"))
+s[[3]] <- read.csv(file.path(survey_folder, "salmonella.csv"))
+s[[4]] <- read.csv(file.path(survey_folder, "listeria.csv"))
 max_sens <- 0
 max_prev <- 0
-for (i in 1:4)
+for (i in seq_along(s))
 {
   max_sens <- max(max_sens, ncol(s[[i]]))
   max_prev <- max(max_prev, max(s[[i]][-nrow(s[[i]]),]))
@@ -236,7 +236,7 @@ my_vioplot <- function(dat, bw, border, col, at)
 pdf("figure6.pdf", width=10, height=8)
 par(mfrow=c(2,2))
 par(omi=c(0.25,0.25,0.25,0.25), mai=c(0.9,0.9,0.5,0.5))
-for (j in 1:4)
+for (j in seq_along(s))
 {
   plot(NULL, xlim=c(0.5,max_sens+0.5), ylim=c(0,0.05*1.05), ylab="Prevalence", xlab="Detection limit (per 25mL)", xaxt="n", yaxs="i")
   for (i in 1:max_sens)

@@ -28,8 +28,8 @@ Diagnostics may be produced using tbc_diagnostics.R script in the same folder.
 
 ## Pathogen survey simulation
 
-TODO: This is being tidied for upload, mainly to remove outdated versions of the simulation
-for clarity.
+The survey simulation, including predicted contentrations per litre is found in the
+survey.R script in the survey_model folder.
 
 ## Figures
 
