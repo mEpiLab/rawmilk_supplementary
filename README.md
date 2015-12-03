@@ -10,13 +10,12 @@ full formulation of the MCMC scheme for fitting total bacterial count data.
 
 ## Data
 
-The data necessary for the total bacterial count model and pathogen survey simulation
-are located in the data folder.
+The data necessary for the all the results presented in the paper are located in the data folder.
 
 ## Total Bacterial Counts versus other covariates
 
 The generalised linear mixed model for fitting TBC to other covariates, and computation
-of $R^2$ values is available in the tbc_vs_other_variables.R script in the tbc_vs_other_variables
+of R-squared values is available in the tbc_vs_other_variables.R script in the tbc_vs_other_variables
 folder.
 
 ## Total Bacterial Counts
