@@ -63,8 +63,8 @@ par(mai=c(0.8, 0.8, 0.25, 0.2), omi=c(0,0,0,0))
 plot(density(log10(exp(mu_a_post))), xlim=c(0.6,1.6), xlab=expression(log[10] * "(TBC)/" * mu *"L"), ylab="Density", main="", xaxt="n")
 axis(1, at=seq(0,5,by=0.2))
 lines(density(log10(exp(mu_a_post + mu_b_post))), col="black", lty="dashed", lwd=1.5)
-text(log10(6.5),22, expression(alpha))
-text(log10(21),5, expression(beta), col="black")
+text(log10(6.5),22, expression(mu[alpha]))
+text(log10(21),5, expression(mu[beta]), col="black")
 mtext("Fig 2", side=3, at=1.6, adj=0, line=0.2)
 
 screen(3) # bottom left
